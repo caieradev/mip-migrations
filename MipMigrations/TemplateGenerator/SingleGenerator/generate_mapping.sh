@@ -2,10 +2,11 @@
 
 if [ $# -lt 1 ]
 then
-  echo "Usage: generate_mapping.sh <FuncionalityName>"
+  echo "Usage: generate_mapping.sh <Index> <FuncionalityName>"
   exit 1
 fi
 
-functionalityName=$1
+index=$1
+functionalityName=$2
 
-./generate_file.sh "${functionalityName}" "../Templates/mapping.txt" "${functionalityName}Mapping.cs" "../../Infrastructure/Database/Mapping"
+./generate_mapping_file.sh "${index}" "${functionalityName}" "../Templates/mapping.txt" "${functionalityName}Mapping.cs" "../../Infrastructure/Database/Mapping/${index}"

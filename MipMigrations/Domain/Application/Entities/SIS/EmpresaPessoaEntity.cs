@@ -5,9 +5,11 @@ namespace MipMigrations.Domain.Application.Entities;
 public class EmpresaPessoaEntity : IEntity
 {
     public Guid Id { get; set; }
-    public bool Active { get; set; } = true;
+    public bool Ativo { get; set; } = true;
     public DateTimeOffset DataCadastro { get; set; }
     public DateTimeOffset DataAtualizacao { get; set; }
+
+    public bool Socio { get; set; } = false;
 
     public Guid EmpresaId { get; set; }
     public EmpresaEntity Empresa { get; set; } = null!;

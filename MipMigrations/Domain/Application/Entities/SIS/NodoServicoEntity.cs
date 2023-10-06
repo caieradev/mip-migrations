@@ -5,7 +5,7 @@ namespace MipMigrations.Domain.Application.Entities;
 public class NodoServicoEntity : IEntity
 {
     public Guid Id { get; set; }
-    public bool Active { get; set; } = true;
+    public bool Ativo { get; set; } = true;
     public DateTimeOffset DataCadastro { get; set; }
     public DateTimeOffset DataAtualizacao { get; set; }
 
@@ -19,5 +19,5 @@ public class NodoServicoEntity : IEntity
     public NodoServicoEntity? ServicoPai { get; set; }
 
     public ICollection<NodoServicoEntity> ServicosFilhos { get; set; } = new List<NodoServicoEntity>();
-    public ICollection<PlanoEntity> Planos { get; set; } = new List<PlanoEntity>();
+    public ICollection<PlanoNodoServicoEntity> PlanoNodoServicos { get; set; } = new List<PlanoNodoServicoEntity>();
 }

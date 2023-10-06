@@ -8,12 +8,12 @@ public static class IQueryableExtensions
 {
     public static IQueryable<T> Actives<T>(this IQueryable<T> query) where T : class, IEntity =>
         query
-            .Where(x => x.Active);
+            .Where(x => x.Ativo);
 
     public static async Task DeactivateAsync<T>(this IQueryable<T> query, Expression<Func<T, bool>> predicate) where T : class, IEntity =>
         await query
             .Where(predicate)
-            .ExecuteUpdateAsync(s => s.SetProperty(x => x.Active, false));
+            .ExecuteUpdateAsync(s => s.SetProperty(x => x.Ativo, false));
 
     public static IQueryable<T> ApplyPagination<T>(this IQueryable<T> query, PaginationDTO pagination, Expression<Func<T, bool>>? predicate = null)
     {

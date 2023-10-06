@@ -7,7 +7,7 @@ public static class DbSetExtensions
 {
     public static IQueryable<T> Actives<T>(this DbSet<T> dbSet) where T : class, IEntity =>
         dbSet
-            .Where(x => x.Active);
+            .Where(x => x.Ativo);
 
     public static async Task InsertOrUpdate<T>(this DbSet<T> dbSet, T entity) where T : class, IEntity
     {
@@ -20,5 +20,5 @@ public static class DbSetExtensions
     public static async Task DeactivateAsync<T>(this DbSet<T> dbSet, Expression<Func<T, bool>> predicate) where T : class, IEntity =>
         await dbSet
             .Where(predicate)
-            .ExecuteUpdateAsync(s => s.SetProperty(x => x.Active, false));
+            .ExecuteUpdateAsync(s => s.SetProperty(x => x.Ativo, false));
 }

@@ -5,7 +5,7 @@ namespace MipMigrations.Domain.Application.Entities;
 public class PessoaEntity : IEntity
 {
     public Guid Id { get; set; }
-    public bool Active { get; set; } = true;
+    public bool Ativo { get; set; } = true;
     public DateTimeOffset DataCadastro { get; set; }
     public DateTimeOffset DataAtualizacao { get; set; }
 
