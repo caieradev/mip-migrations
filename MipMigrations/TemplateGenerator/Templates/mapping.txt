@@ -1,0 +1,12 @@
+using MipMigrations.Domain.Application.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace MipMigrations.Infrastructure.Database.Mapping;
+public class {FUNCTIONALITY_NAME}Mapping : IEntityTypeConfiguration<{FUNCTIONALITY_NAME}Entity>
+{
+    public void Configure(EntityTypeBuilder<{FUNCTIONALITY_NAME}Entity> entity)
+    {
+        
+    }
+}
