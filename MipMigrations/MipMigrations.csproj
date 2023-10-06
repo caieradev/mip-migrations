@@ -11,7 +11,7 @@
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
 	<IsPackable>true</IsPackable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-	<PackageProjectUrl>https://github.com/caieradev/mip-migrations</PackageProjectUrl>
+	<RepositoryUrl>https://github.com/caieradev/mip-migrations</RepositoryUrl>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
 	<RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
