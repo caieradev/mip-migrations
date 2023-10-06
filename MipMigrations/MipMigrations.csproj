@@ -1,30 +1,29 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
 <PropertyGroup>
-    <VersionPrefix>0.0.0-alpha.1</VersionPrefix>
-    <TargetFramework>net7.0</TargetFramework>
+	<TargetFramework>net7.0</TargetFramework>
+	<LangVersion>latest</LangVersion>
+	<PackageId>MipMigrations</PackageId>
+    <Version>0.0.0-alpha.1</Version>
+	<Authors>Caio Fernandes</Authors>
+	<Company>CaieraDev</Company>
+	<Description>Migrations e Entidades de Banco para o MIP</Description>
+    <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+	<IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	<PackageProjectUrl>https://github.com/caieradev/mip-migrations</PackageProjectUrl>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-		<LangVersion>latest</LangVersion>
-		<RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
-		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-		<Description>Database Entities and Migrations</Description>
-		<PackageTags>mip</PackageTags>
-		<PackageProjectUrl></PackageProjectUrl>
-		<Authors>Caio Fernandes</Authors>
-		<Company>CaieraDev</Company>
-		<Copyright>2023</Copyright>
-		<IsPackable>true</IsPackable>
-		<Title>Mip Migrations</Title>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Deterministic>true</Deterministic>
-		<EmbedUntrackedSources>true</EmbedUntrackedSources>
-		<ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
-		<DebugType>embedded</DebugType>
-		<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
-		<PublishRepositoryUrl>true</PublishRepositoryUrl>
-		<AssemblyName>MipMigrations</AssemblyName>
-  </PropertyGroup>
+	<RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+	<Copyright>2023</Copyright>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<Deterministic>true</Deterministic>
+	<EmbedUntrackedSources>true</EmbedUntrackedSources>
+	<DebugType>embedded</DebugType>
+	<AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+	<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	<AssemblyName>MipMigrations</AssemblyName>
+</PropertyGroup>
   
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
