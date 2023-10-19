@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MipMigrations.SIS.Infrastructure.Database.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial : Migration
+    public partial class SISMS_v1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -345,11 +345,11 @@ namespace MipMigrations.SIS.Infrastructure.Database.Migrations
                     Ativo = table.Column<bool>(type: "bit", nullable: false),
                     DataCadastro = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     DataAtualizacao = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    ImageId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    FileId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FileName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ContentType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FileSize = table.Column<long>(type: "bigint", nullable: false),
-                    ThumbImageId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    ThumbFileId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     ThumbContentType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ThumbFileSize = table.Column<long>(type: "bigint", nullable: true),
                     EmpresaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
@@ -511,11 +511,11 @@ namespace MipMigrations.SIS.Infrastructure.Database.Migrations
                     Ativo = table.Column<bool>(type: "bit", nullable: false),
                     DataCadastro = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
                     DataAtualizacao = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false),
-                    ImageId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    FileId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     FileName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ContentType = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FileSize = table.Column<long>(type: "bigint", nullable: false),
-                    ThumbImageId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
+                    ThumbFileId = table.Column<Guid>(type: "uniqueidentifier", nullable: true),
                     ThumbContentType = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     ThumbFileSize = table.Column<long>(type: "bigint", nullable: true),
                     PessoaId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)

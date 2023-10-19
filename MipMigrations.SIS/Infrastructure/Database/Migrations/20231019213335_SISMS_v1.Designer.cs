@@ -12,8 +12,8 @@ using MipMigrations.SIS.Infrastructure.Database;
 namespace MipMigrations.SIS.Infrastructure.Database.Migrations
 {
     [DbContext(typeof(MipSisDbContext))]
-    [Migration("20231010222756_Initial")]
-    partial class Initial
+    [Migration("20231019213335_SISMS_v1")]
+    partial class SISMS_v1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -265,6 +265,9 @@ namespace MipMigrations.SIS.Infrastructure.Database.Migrations
                     b.Property<Guid>("EmpresaId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("FileId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("FileName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -272,17 +275,14 @@ namespace MipMigrations.SIS.Infrastructure.Database.Migrations
                     b.Property<long>("FileSize")
                         .HasColumnType("bigint");
 
-                    b.Property<Guid>("ImageId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("ThumbContentType")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("ThumbFileId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<long?>("ThumbFileSize")
                         .HasColumnType("bigint");
-
-                    b.Property<Guid?>("ThumbImageId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
@@ -543,6 +543,9 @@ namespace MipMigrations.SIS.Infrastructure.Database.Migrations
                     b.Property<DateTimeOffset>("DataCadastro")
                         .HasColumnType("datetimeoffset");
 
+                    b.Property<Guid>("FileId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("FileName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -550,20 +553,17 @@ namespace MipMigrations.SIS.Infrastructure.Database.Migrations
                     b.Property<long>("FileSize")
                         .HasColumnType("bigint");
 
-                    b.Property<Guid>("ImageId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("PessoaId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ThumbContentType")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid?>("ThumbFileId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<long?>("ThumbFileSize")
                         .HasColumnType("bigint");
-
-                    b.Property<Guid?>("ThumbImageId")
-                        .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
