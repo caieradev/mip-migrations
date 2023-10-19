@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <RootNamespace>$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    <PackageId>MipMigrations.SIS</PackageId>
+    <IsPackable>True</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>0.0.0-alpha.5</Version>
+    <Authors>Caio Fernandes</Authors>
+    <Company>CaieraDev</Company>
+    <Description>Migrations e Entidades do Banco de dados SIS para o MIP</Description>
+    <RepositoryUrl>https://github.com/caieradev/mip-migrations</RepositoryUrl>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Copyright>2023</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <Deterministic>true</Deterministic>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <AssemblyName>MipMigrations.SIS</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MipMigrations" Version="0.0.0-alpha.5" />
+  </ItemGroup>
+</Project>

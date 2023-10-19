@@ -1,0 +1,26 @@
+using MipMigrations.SIS.Domain.Application.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace MipMigrations.SIS.Infrastructure.Database.Mapping;
+public class {FUNCTIONALITY_NAME}Mapping : IEntityTypeConfiguration<{FUNCTIONALITY_NAME}Entity>
+{
+    public void Configure(EntityTypeBuilder<{FUNCTIONALITY_NAME}Entity> builder)
+    {
+        builder.ToTable("{INDEX}_");
+
+        builder.HasKey(x => x.Id);
+
+        builder.Property(x => x.Id)
+            .HasColumnName("{INDEX}__ID");
+
+        builder.Property(x => x.Ativo)
+            .HasColumnName("{INDEX}_ATIVO");
+
+        builder.Property(x => x.DataCadastro)
+            .HasColumnName("{INDEX}_DATA_CADASTRO");
+
+        builder.Property(x => x.DataAtualizacao)
+            .HasColumnName("{INDEX}_DATA_ATUALIZACAO");
+    }
+}
